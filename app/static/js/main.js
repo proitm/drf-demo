@@ -19,7 +19,7 @@ $(document).ready(function() {
       contentType: "application/json",
       format: "json",
       success: function(result) {
-        $("#distance").html(result["distance"]) + "km";
+        $("#distance").html(result["distance"]);
         $("#result").show();
       },
       error: function(error) {
