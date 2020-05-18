@@ -1,0 +1,8 @@
+### Launch guideline
+1. Pull & cd the repository
+2. Run
+    docker build -t drf_demo .
+
+    docker run -p 8000:8000 drf_demo
+
+3. Open http://localhost:8000. User other docker container IP address if it is not localhost

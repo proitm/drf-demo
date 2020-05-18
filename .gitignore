@@ -1,0 +1,15 @@
+.env
+env/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Storage
+media/
+.tmp/
+*.log
+*.sql
+build/
+node_modules/
+.zappa_env/
+.local/
+*.sqlite3

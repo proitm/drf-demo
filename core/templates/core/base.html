@@ -1,0 +1,82 @@
+{% load static %}<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links -->
+    <link rel="icon" type="image/png" href="#" />
+    <!-- Document Title -->
+    <title>{% block title_tag %}{% block title_tag_prefix %}{% endblock %}Distance{% block title_tag_suffix %}{% endblock %}{% endblock %}</title>
+
+    {% block head_css %}
+    <!-- google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
+    <!-- style CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <!--Demo CSS-->
+    {% endblock %}
+
+    {% block head_js %}
+    {% endblock %}
+
+    {% block extra_head %}
+    {% endblock %}
+</head>
+
+<body>
+    <!-- Preloader starts -->
+    {% block preloader %}
+    {% endblock %}
+    <!-- Preloader ends -->
+    <!--Page Wrapper starts-->
+    <div class="page-wrapper {% block page_wrapper_class %}fixed-footer{% endblock %}">
+        {% block page_wrapper %}
+            <!--header starts-->
+            {% block header %}
+            {% endblock %}
+            <!--Header ends-->
+            {% block hero %}
+            {% endblock %}
+            {% block container_wrapper %}
+            <div class="section-padding mar-top-30">
+                <div class="container pad-bot-30">
+                    <div class="row">
+                        <div class="col-12">
+                        {% block content %}
+                        {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+        {% endblock %}
+    </div>
+    <!-- Pagewrapper ends -->
+    <!-- Footer starts -->
+    {% block footer %}
+    {% endblock %}
+    <!-- Footer ends -->
+
+    <!-- Modals and extras -->
+    {% block extra_body %}
+    {% endblock %}
+    <!-- Modals and extras end -->
+
+    <!--Scripts starts-->
+    {% block body_js %}
+    <!--jquery js-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!--main js-->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    {% block extra_body_js %}
+    {% endblock %}
+    <!--Scripts ends-->
+    {% endblock %}
+
+</body>
+
+</html>

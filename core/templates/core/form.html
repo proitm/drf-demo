@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="main">
+  <div class="error"></div>
+  <form action="." method="POST">
+    <div class="point">
+      Point A:<br><br>
+      Latitude: <input type="text" id="a-lat" value="52.2296756"><br>
+      Longitude: <input type="text" id="a-lon" value="21.0122287"><br>
+    </div><br><br>
+    <div class="point">
+      Point B:<br>
+      Latitude: <input type="text" id="b-lat" value="52.406374"><br>
+      Longitude: <input type="text" id="b-lon" value="16.9251681"><br>
+    </div><br>
+    <button id="calculate">Calculate</button><br><br>
+    <div id="result">
+      Result: <span id="distance"></span>
+    </div>
+  </form>
+</div>
+{% endblock %}
